@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Node OAuth2  测试</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+        <a id="login">请登录GitHub</a>
+
+<script>
+  // fill in your cliend_id
+  const client_id = '85a4648bbd2739257397';
+// githup授权地址
+  const authorize_uri = 'https://github.com/login/oauth/authorize';
+//   重定向路由地址（后台这个路由地址在重定向到welcome.html界面）
+  const redirect_uri = 'http://localhost:8080/oauth/redirect';
+
+  const link = document.getElementById('login');
+  link.href = `${authorize_uri}?client_id=${client_id}&redirect_uri=${redirect_uri}`;
+</script>
+
+</body>
+
+</html>
